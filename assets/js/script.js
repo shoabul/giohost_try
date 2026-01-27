@@ -28,3 +28,19 @@ accordionHeaders.forEach(header => {
         item.classList.toggle('active');
     });
 });
+
+
+// Mobile Menu Toggle Logic
+const mobileMenu = document.getElementById('mobileMenu');
+const navLinks = document.getElementById('navLinks');
+
+if (mobileMenu) {
+    mobileMenu.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        
+        // Icon change (Optional: Bars to X)
+        const icon = mobileMenu.querySelector('i');
+        icon.classList.toggle('fa-bars');
+        icon.classList.toggle('fa-times');
+    });
+}

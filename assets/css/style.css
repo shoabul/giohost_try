@@ -75,6 +75,7 @@ body {
 }
 
 /* 4. NAV LINKS */
+/* --- 1. DESKTOP NAVIGATION (Default) --- */
 .nav-links {
     display: flex;
     list-style: none;
@@ -91,6 +92,45 @@ body {
 
 .nav-links li a:hover {
     color: var(--primary-purple);
+}
+
+/* --- 2. MOBILE NAVIGATION (Responsiveness) --- */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Hamburger icon mobile-e dekhabe */
+        font-size: 22px;
+        cursor: pointer;
+        color: var(--primary-purple);
+        margin-left: 15px;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 80px; /* Header-er thik niche thakbe */
+        left: -100%; /* Initially screen-er baire bame thakbe */
+        width: 100%;
+        height: auto;
+        background: #fff;
+        flex-direction: column; /* Menu item gulo niche niche thakbe */
+        align-items: center;
+        padding: 40px 0;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        transition: 0.4s ease-in-out;
+        z-index: 1000;
+        gap: 20px;
+    }
+
+    /* JavaScript jokhon active class add korbe tokhon eita dekhabe */
+    .nav-links.active {
+        left: 0;
+    }
+}
+
+/* Desktop-e hamburger icon hide thakbe */
+@media screen and (min-width: 769px) {
+    .menu-toggle {
+        display: none;
+    }
 }
 
 /* 5. LOGIN BUTTON */
