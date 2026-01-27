@@ -1444,20 +1444,32 @@ body {
 
 .payment-gateways {
     display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.payment-gateways span {
-    font-size: 12px;
-    font-weight: 800;
-    color: #b5b5be;
-    letter-spacing: 1px;
+    flex-direction: column; /* Label upore image niche thakar jonno */
+    align-items: center;    /* Horizontal center */
+    justify-content: center; /* Vertical center */
+    text-align: center;
+    width: 100%;
+    gap: 15px;
 }
 
 .payment-gateways img {
-    height: 80px;
-    
+    width: 100%;            /* Container onujayi width nibe */
+    max-width: 600px;       /* Desktop-e khub boro jeno na hoy */
+    height: auto;           /* Aspect ratio thik rakhbe */
+    max-height: 60px;       /* Device onujayi height simito rakhbe */
+    object-fit: contain;    /* Image jeno kete na jay ba stretch na hoy */
+    display: block;
+    margin: 0 auto;         /* Center alignment nishchit korbe */
+    /*filter: grayscale(100%); /* Premium look-er jonno (optional) */
+    opacity: 0.8;
+}
+
+/* Mobile-er jonno height arektu choto kora */
+@media screen and (max-width: 480px) {
+    .payment-gateways img {
+        max-height: 40px; 
+        max-width: 90%;     /* Side-e ektu gap thakbe */
+    }
 }
 
 .social-links {
