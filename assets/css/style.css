@@ -1,14 +1,42 @@
-/* 1. VARIABLES - Jekhane apni shohoje color change korte parben */
+/* ============================================================================
+   GIOHOST - PREMIUM WEB HOSTING STYLESHEET
+   ============================================================================
+   Table of Contents:
+   1. CSS Variables & Reset
+   2. Global Styles & Typography
+   3. Layout & Container
+   4. Header & Navigation
+   5. Hero Section
+   6. Pricing Section
+   7. Upsell Banner
+   8. Domain Section
+   9. Features Grid Section
+   10. Security Section
+   11. Support Section
+   12. Free Features Section
+   13. Testimonial Section
+   14. FAQ Section
+   15. Footer
+   16. Responsive Design (Media Queries)
+   ============================================================================ */
+
+
+/* ============================================================================
+   1. CSS VARIABLES & RESET
+   ============================================================================ */
+
+/* CSS Custom Properties - Easily modify colors and values */
 :root {
     --primary-purple: #7b61ff;
-    --dark-text: #1d1d1f; /* Apple style dark */
+    --dark-text: #1d1d1f;          /* Apple-style dark text */
     --light-text: #86868b;
-    --nav-bg: rgba(255, 255, 255, 0.7); /* Glassmorphism background */
+    --nav-bg: rgba(255, 255, 255, 0.7);  /* Glassmorphism background */
     --nav-blur: 15px;
     --btn-bg: #e8e8ed;
     --transition: all 0.3s ease;
 }
 
+/* Global Reset */
 * {
     margin: 0;
     padding: 0;
@@ -16,11 +44,37 @@
     font-family: 'Inter', sans-serif;
 }
 
+
+/* ============================================================================
+   2. GLOBAL STYLES & TYPOGRAPHY
+   ============================================================================ */
+
+/* Body Styling */
 body {
-    background-color: #ffffff; /* Liquid background pore add hobe hero section-e */
-    height: 200vh; /* Scroll check korar jonno dummy height */
+    background-color: #ffffff;
+    height: 200vh;  /* Dummy height for scroll testing */
 }
 
+/* Section Title - Centered */
+.section-title {
+    margin-bottom: 40px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Section Title - Left Aligned */
+.section-title-left {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+
+/* ============================================================================
+   3. LAYOUT & CONTAINER
+   ============================================================================ */
+
+/* Main Container for Content Width */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -30,27 +84,30 @@ body {
     align-items: center;
 }
 
-/* 2. HEADER STYLING */
-/* 1. UPDATED FLOATING HEADER */
+
+/* ============================================================================
+   4. HEADER & NAVIGATION
+   ============================================================================ */
+
+/* Floating Header with Glassmorphism Effect */
 .main-header {
     position: fixed;
-    top: 20px; /* Upore ektu jayga rakha hoyeche floating feel-er jonno */
+    top: 20px;  /* Space from top for floating effect */
     left: 50%;
-    transform: translateX(-50%); /* Majhkhan e anar jonno */
-    width: 90%; /* Puro page jure thakbe na */
-    max-width: 1100px; /* Header-er maximum chora */
+    transform: translateX(-50%);  /* Center horizontally */
+    width: 90%;
+    max-width: 1100px;
     z-index: 1000;
     padding: 10px 0;
     background: var(--nav-bg);
     backdrop-filter: blur(var(--nav-blur));
     -webkit-backdrop-filter: blur(var(--nav-blur));
     border: 1px solid rgba(255, 255, 255, 0.4);
-    border-radius: 20px; /* Corner round kora hoyeche box shape anar jonno */
+    border-radius: 20px;  /* Rounded corners for box shape */
     transition: var(--transition);
 }
 
-
-
+/* Header on Scroll State */
 .main-header.scrolled {
     top: 10px;
     width: 95%;
@@ -58,8 +115,7 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
-
-/* 3. LOGO */
+/* Logo Styling */
 .logo {
     display: flex;
     align-items: center;
@@ -74,8 +130,12 @@ body {
     color: var(--primary-purple);
 }
 
-/* 4. NAV LINKS */
-/* --- 1. DESKTOP NAVIGATION (Default) --- */
+.logo img {
+    height: 30px;
+    width: auto;
+}
+
+/* Navigation Links - Desktop */
 .nav-links {
     display: flex;
     list-style: none;
@@ -94,46 +154,7 @@ body {
     color: var(--primary-purple);
 }
 
-/* --- 2. MOBILE NAVIGATION (Responsiveness) --- */
-@media screen and (max-width: 768px) {
-    .menu-toggle {
-        display: block; /* Hamburger icon mobile-e dekhabe */
-        font-size: 22px;
-        cursor: pointer;
-        color: var(--primary-purple);
-        margin-left: 15px;
-    }
-
-    .nav-links {
-        position: absolute;
-        top: 80px; /* Header-er thik niche thakbe */
-        left: -100%; /* Initially screen-er baire bame thakbe */
-        width: 100%;
-        height: auto;
-        background: #fff;
-        flex-direction: column; /* Menu item gulo niche niche thakbe */
-        align-items: center;
-        padding: 40px 0;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        transition: 0.4s ease-in-out;
-        z-index: 1000;
-        gap: 20px;
-    }
-
-    /* JavaScript jokhon active class add korbe tokhon eita dekhabe */
-    .nav-links.active {
-        left: 0;
-    }
-}
-
-/* Desktop-e hamburger icon hide thakbe */
-@media screen and (min-width: 769px) {
-    .menu-toggle {
-        display: none;
-    }
-}
-
-/* 5. LOGIN BUTTON */
+/* Login Button */
 .login-btn {
     display: flex;
     align-items: center;
@@ -153,156 +174,78 @@ body {
     transform: translateY(-1px);
 }
 
-/* 2. HERO CONTENT ALIGNMENT FIX */
-.hero-section {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    min-height: 100vh !important;
-    text-align: center !important;
-    padding: 100px 20px !important;
+/* Mobile Menu Toggle - Hidden on Desktop */
+.menu-toggle {
+    display: none;
 }
 
+
+/* ============================================================================
+   5. HERO SECTION
+   ============================================================================ */
+
+/* Hero Section Container */
+.hero-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    overflow: hidden;
+    padding: 100px 20px !important;
+    padding-top: 80px;
+}
+
+/* Hero Content Wrapper */
 .hero-content {
-    max-width: 850px !important; /* Content chorano bondho korbe */
+    max-width: 850px !important;
+    width: 100%;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
+    justify-content: center;
     gap: 20px !important;
     margin: 0 auto !important;
+    z-index: 2;
+    padding: 0 20px;
 }
 
-/* Header image/logo fix */
-.logo img {
-    height: 30px;
-    width: auto;
-}
-
-/* H1 Typography adjustment */
+/* Hero Headline */
 .hero-content h1 {
     font-size: clamp(2.2rem, 6vw, 4.5rem);
     font-weight: 800;
-    margin: 0;
+    max-width: 700px;
+    margin: 0 auto;
     line-height: 1.1;
 }
 
-/* Paragraph adjustment */
+/* Hero Paragraph */
 .hero-content p {
-    max-width: 600px; /* Text jeno khub beshi chorano na hoy */
-    margin: 0;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-/* Buttons container */
+/* Badge Element */
+.badge {
+    margin: 0 auto 20px auto;
+}
+
+/* Call-to-Action Buttons Container */
 .hero-btns {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
     justify-content: center;
-    margin-top: 10px;
-}
-
-/* 1. LIQUID BACKGROUND & DOT GRID */
-.liquid-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background: #ffffff; /* Base Color */
-}
-
-/* Apple-style Blobs */
-.blob {
-    position: absolute;
-    filter: blur(80px); /* Liquid effect toiri kore */
-    border-radius: 50%;
-    opacity: 0.6;
-    animation: move 20s infinite alternate;
-}
-
-.blob-1 {
-    width: 500px;
-    height: 500px;
-    background: #e0d9ff; /* Light Purple */
-    top: -100px;
-    left: -100px;
-}
-
-.blob-2 {
-    width: 400px;
-    height: 400px;
-    background: #f0eaff; /* Very Light Lavender */
-    bottom: -50px;
-    right: -50px;
-    animation-delay: -5s;
-}
-
-.blob-3 {
-    width: 300px;
-    height: 300px;
-    background: #d4ccff;
-    top: 40%;
-    right: 20%;
-}
-
-/* Dot Grid Pattern Overlay */
-.dot-grid {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: radial-gradient(#d1d1d6 0.8px, transparent 0.8px);
-    background-size: 30px 30px; /* Dot density control */
-    opacity: 0.3;
-}
-
-/* 2. HERO CONTENT STYLING */
-.hero-section {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center; /* Horizontal Center */
-    align-items: center;     /* Vertical Center */
-    text-align: center;
-    overflow: hidden;
-    padding-top: 80px;      /* Header-er jonno jayga */
-}
-
-.hero-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;    /* Protiti line center-e thakbe */
-    justify-content: center;
-    max-width: 900px;
-    width: 100%;
-    z-index: 2;
-    padding: 0 20px;
-}
-
-/* Badge center fix */
-.badge {
-    margin: 0 auto 20px auto;
-}
-
-/* Button group center fix */
-.hero-btns {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
+    align-items: center;
     width: 100%;
     margin-top: 10px;
-}
-
-/* 3. BUTTONS */
-.hero-btns {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
     margin-bottom: 40px;
 }
 
+/* Button Base Styles */
 .btn {
     padding: 14px 28px;
     border-radius: 10px;
@@ -311,15 +254,17 @@ body {
     transition: var(--transition);
 }
 
+/* Primary Button */
 .btn-primary {
     background: var(--primary-purple);
     color: #fff;
 }
 
+/* Secondary Button */
 .btn-secondary {
     border: 1px solid #d1d1d6;
     color: var(--dark-text);
-    background: rgba(255,255,255,0.5);
+    background: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(5px);
 }
 
@@ -328,7 +273,15 @@ body {
     box-shadow: 0 10px 20px rgba(123, 97, 255, 0.15);
 }
 
-/* 4. SOCIAL PROOF (Avatars) */
+/* Social Proof Section */
+.social-proof {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Avatar Group */
 .avatar-group {
     display: flex;
     justify-content: center;
@@ -348,75 +301,129 @@ body {
     color: var(--light-text);
 }
 
+/* --- Liquid Background Animation --- */
+
+/* Liquid Background Container */
+.liquid-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: #ffffff;
+}
+
+/* Animated Blobs - Apple Style */
+.blob {
+    position: absolute;
+    filter: blur(80px);  /* Creates liquid effect */
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: move 20s infinite alternate;
+}
+
+.blob-1 {
+    width: 500px;
+    height: 500px;
+    background: #e0d9ff;  /* Light Purple */
+    top: -100px;
+    left: -100px;
+}
+
+.blob-2 {
+    width: 400px;
+    height: 400px;
+    background: #f0eaff;  /* Very Light Lavender */
+    bottom: -50px;
+    right: -50px;
+    animation-delay: -5s;
+}
+
+.blob-3 {
+    width: 300px;
+    height: 300px;
+    background: #d4ccff;
+    top: 40%;
+    right: 20%;
+}
+
+/* Dot Grid Pattern Overlay */
+.dot-grid {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(#d1d1d6 0.8px, transparent 0.8px);
+    background-size: 30px 30px;  /* Dot density control */
+    opacity: 0.3;
+}
+
 /* Liquid Movement Animation */
 @keyframes move {
-    from { transform: translate(0, 0) rotate(0deg); }
-    to { transform: translate(50px, 100px) rotate(10deg); }
+    from {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    to {
+        transform: translate(50px, 100px) rotate(10deg);
+    }
 }
 
 
-/* PRICING SECTION STYLING */
+/* ============================================================================
+   6. PRICING SECTION
+   ============================================================================ */
+
+/* Pricing Section Container */
 .pricing-section {
     width: 100%;
     padding: 100px 0;
     display: flex;
     flex-direction: column;
-    align-items: center;     /* Puro section center-e thakbe */
+    align-items: center;
     justify-content: center;
 }
 
+/* Pricing Content Container */
 .pricing-container {
     width: 100%;
-    max-width: 1200px;      /* Content-er choratuku simito rakha */
-    margin: 0 auto;         /* Left-Right auto margin diye center-e kora */
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* Pricing Cards Grid */
 .pricing-grid {
     display: flex;
-    flex-wrap: wrap;        /* Mobile responsive support */
-    justify-content: center; /* Card guloke majhkhan e rakhar jonno */
-    align-items: stretch;    /* Card-er height soman rakhar jonno */
-    gap: 30px;
-    width: 100%;
-    padding: 20px;
-}
-
-/* Individual Card Fix */
-.pricing-card.floating {
-    flex: 0 1 350px;       /* 350px width maintain korbe kintu center thakbe */
-    margin: 0;              /* Extra margin thakle remove kora */
-}
-
-/* FLOATING GRID LAYOUT */
-.pricing-grid {
-    display: flex;
-    justify-content: center; /* Card guloke center e ane */
-    flex-wrap: wrap; /* Mobile er jonno responsiveness */
+    flex-wrap: wrap;  /* Mobile responsive support */
+    justify-content: center;
+    align-items: stretch;  /* Equal card heights */
     gap: 30px;
     width: 100%;
     max-width: 1200px;
+    padding: 20px;
 }
 
-/* FLOATING CARD STYLING */
+/* Individual Pricing Card */
 .pricing-card.floating {
-    background: rgba(255, 255, 255, 0.8); /* Glass effect */
+    background: rgba(255, 255, 255, 0.8);  /* Glass effect */
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.4);
     border-radius: 30px;
     padding: 50px 35px;
-    width: 350px; /* Fixed width for consistency */
+    width: 350px;  /* Fixed width for consistency */
+    flex: 0 1 350px;
+    margin: 0;
     text-align: center;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05); /* Floating shadow */
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
     transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
 }
 
-/* Featured Card ektu upore thakbe */
+/* Featured Pricing Card - Highlighted */
 .pricing-card.featured {
     border: 2px solid var(--primary-purple);
-    transform: translateY(-15px); /* Initially floating higher */
+    transform: translateY(-15px);  /* Initially floating higher */
     background: #fff;
     box-shadow: 0 30px 60px rgba(123, 97, 255, 0.1);
 }
@@ -426,12 +433,14 @@ body {
     box-shadow: 0 40px 80px rgba(0, 0, 0, 0.1);
 }
 
+/* Card Header Styling */
 .card-header h3 {
     font-size: 1.5rem;
     margin-bottom: 20px;
     color: var(--dark-text);
 }
 
+/* Price Display */
 .price {
     font-size: 1.2rem;
     font-weight: 700;
@@ -443,6 +452,7 @@ body {
     font-size: 3.5rem;
 }
 
+/* Discount Badge */
 .discount {
     background: #e0d9ff;
     color: var(--primary-purple);
@@ -452,7 +462,7 @@ body {
     font-weight: 700;
 }
 
-/* BUTTONS */
+/* View Plans Button */
 .view-plans-btn {
     display: block;
     width: 100%;
@@ -476,7 +486,7 @@ body {
     color: #fff;
 }
 
-/* FEATURES LIST */
+/* Features List */
 .features {
     list-style: none;
     text-align: left;
@@ -491,7 +501,7 @@ body {
     position: relative;
 }
 
-/* Blue dot for features */
+/* Checkmark Icon Before Features */
 .features li::before {
     content: "✓";
     position: absolute;
@@ -501,16 +511,21 @@ body {
 }
 
 
-/* UPSELL BANNER STYLING */
+/* ============================================================================
+   7. UPSELL BANNER
+   ============================================================================ */
+
+/* Upsell Banner Section */
 .upsell-banner {
     padding: 40px 0;
-    margin-bottom: 60px; /* Domain search er sathe distance */
+    margin-bottom: 60px;
     display: flex;
     justify-content: center;
 }
 
+/* Upsell Content Container */
 .upsell-container {
-    background: linear-gradient(90deg, #3d3b7d 0%, #5b54a2 100%); /* Dark purple gradient as seen in screenshot */
+    background: linear-gradient(90deg, #3d3b7d 0%, #5b54a2 100%);  /* Dark purple gradient */
     width: 90%;
     max-width: 1100px;
     padding: 40px 60px;
@@ -534,7 +549,7 @@ body {
     font-weight: 400;
 }
 
-/* OUTLINE BUTTON FOR DARK THEME */
+/* Outline Button for Dark Theme */
 .view-plans-outline {
     display: inline-block;
     padding: 12px 30px;
@@ -554,21 +569,16 @@ body {
     transform: translateY(-2px);
 }
 
-/* Responsive Fix */
-@media (max-width: 768px) {
-    .upsell-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 25px;
-        padding: 40px 20px;
-    }
-}
 
-/* DOMAIN SECTION STYLING */
+/* ============================================================================
+   8. DOMAIN SECTION
+   ============================================================================ */
+
+/* Domain Section Container */
 .domain-section {
     padding: 100px 0;
     background-image: radial-gradient(#d1d1d6 0.5px, transparent 0.5px);
-    background-size: 30px 30px; /* Dot pattern consistency */
+    background-size: 30px 30px;  /* Dot pattern consistency */
     display: flex;
     justify-content: center;
 }
@@ -579,18 +589,19 @@ body {
     align-items: center;
     width: 100%;
     max-width: 1000px;
+    padding: 60px 20px;
 }
 
-/* SEARCH BOX */
+/* Domain Search Box */
 .domain-search-box {
     width: 100%;
     max-width: 700px;
     display: flex;
     background: #fff;
     padding: 8px;
-    border-radius: 50px; /* Apple style pill shape */
+    border-radius: 50px;  /* Apple-style pill shape */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    margin-bottom: 50px;
+    margin: 30px auto 50px auto;
     border: 1px solid #f0f0f5;
 }
 
@@ -603,6 +614,7 @@ body {
     background: transparent;
 }
 
+/* Search Button */
 .search-btn {
     background: var(--primary-purple);
     color: #fff;
@@ -619,14 +631,16 @@ body {
     transform: scale(1.02);
 }
 
-/* DOMAIN LIST (CARDS) */
+/* Domain Extensions List */
 .domain-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    width: 100%;
 }
 
+/* Individual Domain Item Card */
 .domain-item {
     background: #fff;
     padding: 20px 30px;
@@ -644,6 +658,7 @@ body {
     box-shadow: 0 10px 25px rgba(123, 97, 255, 0.1);
 }
 
+/* Sale Badge on Domain Items */
 .sale-badge {
     position: absolute;
     top: -10px;
@@ -680,79 +695,14 @@ body {
 }
 
 
+/* ============================================================================
+   9. FEATURES GRID SECTION - "Everything in One Place"
+   ============================================================================ */
 
-/* --- GLOBAL ALIGNMENT & SPACING REPAIR --- */
-
-/* 1. Hero Section Content Fix */
-.hero-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Horizontally center */
-    justify-content: center; /* Vertically center */
-    text-align: center;
-    gap: 24px; /* Text element gulo majhkhan e soman gap rakhbe */
-}
-
-.hero-content h1 {
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.hero-content p {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-/* 2. Button & Social Proof Grouping */
-.hero-btns {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    margin-top: 10px;
-}
-
-.social-proof {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-}
-
-/* 3. Domain Search Section Alignment Fix */
-.domain-container {
-    padding: 60px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.domain-search-box {
-    margin: 30px auto 50px auto; /* Upore ebong niche alignment thik kora hoyechhe */
-    width: 100%;
-    max-width: 700px;
-}
-
-.domain-list {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    width: 100%;
-}
-
-/* 4. Pricing Section Title Fix */
-.section-title {
-    margin-bottom: 40px;
-    text-align: center;
-    width: 100%;
-}
-
-
-/* --- EVERYTHING IN ONE PLACE STYLING --- */
+/* Features Grid Section Container */
 .features-grid-section {
     padding: 100px 0;
-    background-color: #0f0b3d; /* Dark theme background */
+    background-color: #0f0b3d;  /* Dark theme background */
     color: #ffffff;
     overflow: hidden;
 }
@@ -764,17 +714,13 @@ body {
     gap: 50px;
 }
 
+/* Left Side - Feature Content */
 .features-content {
     flex: 1;
     max-width: 500px;
 }
 
-.section-title-left {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    font-weight: 700;
-}
-
+/* Individual Feature Item */
 .feature-item {
     display: flex;
     align-items: flex-start;
@@ -782,6 +728,7 @@ body {
     margin-bottom: 30px;
 }
 
+/* Feature Icon Box */
 .feature-icon-box {
     background: rgba(255, 255, 255, 0.1);
     width: 50px;
@@ -794,6 +741,7 @@ body {
     color: #7b61ff;
 }
 
+/* Feature Text Content */
 .feature-text h3 {
     font-size: 1.2rem;
     margin-bottom: 5px;
@@ -805,6 +753,7 @@ body {
     line-height: 1.6;
 }
 
+/* Get Started Button */
 .btn-get-started {
     display: inline-block;
     background: #7b61ff;
@@ -817,7 +766,7 @@ body {
     transition: 0.3s;
 }
 
-/* Right Side Visual Grid */
+/* Right Side - Visual Grid Cards */
 .features-visual {
     flex: 1;
     display: grid;
@@ -825,6 +774,7 @@ body {
     gap: 20px;
 }
 
+/* Visual Card Styling */
 .visual-card {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -852,6 +802,7 @@ body {
     opacity: 0.8;
 }
 
+/* Performance Score Circle */
 .score-circle {
     width: 70px;
     height: 70px;
@@ -865,20 +816,12 @@ body {
     color: #00ff88;
 }
 
-/* Responsive */
-@media (max-width: 992px) {
-    .features-container {
-        flex-direction: column;
-        text-align: center;
-    }
-    .feature-item {
-        flex-direction: column;
-        align-items: center;
-    }
-}
 
+/* ============================================================================
+   10. SECURITY SECTION - "Top Security. Full Confidence"
+   ============================================================================ */
 
-/* --- TRUST & SECURITY STYLING --- */
+/* Security Section Container */
 .security-section {
     padding: 100px 0;
     background-color: #ffffff;
@@ -892,10 +835,12 @@ body {
     gap: 80px;
 }
 
+/* Left Side - Security Text */
 .security-text {
     flex: 1;
 }
 
+/* Security Features List */
 .security-list {
     list-style: none;
     margin-top: 30px;
@@ -915,7 +860,7 @@ body {
     font-size: 1.3rem;
 }
 
-/* Right Side Graphics */
+/* Right Side - Security Graphics */
 .security-graphics {
     flex: 1;
     position: relative;
@@ -929,6 +874,7 @@ body {
     max-width: 450px;
 }
 
+/* Main Security Card */
 .security-card-main {
     background: #f8f9ff;
     border-radius: 30px;
@@ -943,6 +889,7 @@ body {
     border-radius: 20px;
 }
 
+/* Active Badge */
 .badge-active {
     position: absolute;
     top: 30px;
@@ -955,7 +902,7 @@ body {
     font-size: 12px;
 }
 
-/* Floating Elements Animation */
+/* Floating Badge Elements with Animation */
 .floating-badge {
     position: absolute;
     background: #fff;
@@ -984,24 +931,22 @@ body {
     animation-delay: 2s;
 }
 
+/* Float Animation */
 @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
-}
-
-/* Responsive */
-@media (max-width: 992px) {
-    .security-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 50px;
+    0%, 100% {
+        transform: translateY(0);
     }
-    .security-list li {
-        justify-content: center;
+    50% {
+        transform: translateY(-15px);
     }
 }
 
-/* --- ELITE SUPPORT STYLING --- */
+
+/* ============================================================================
+   11. SUPPORT SECTION - "Elite Support, Available 24/7"
+   ============================================================================ */
+
+/* Support Section Container */
 .support-section {
     padding: 100px 0;
     background-color: #fcfcff;
@@ -1013,10 +958,10 @@ body {
     align-items: center;
     justify-content: space-between;
     gap: 60px;
-    flex-direction: row-reverse; /* UI diversity-r jonno image dane-bame change kora hoyeche */
+    flex-direction: row-reverse;  /* Image on right for UI diversity */
 }
 
-/* Chat Visual Styling */
+/* Left Side - Chat Visual */
 .support-visual {
     flex: 1;
     display: flex;
@@ -1029,6 +974,7 @@ body {
     max-width: 400px;
 }
 
+/* Chat Bubble Container */
 .chat-bubble {
     display: flex;
     align-items: flex-end;
@@ -1042,9 +988,10 @@ body {
     height: 45px;
     border-radius: 50%;
     border: 2px solid #fff;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
+/* Chat Message Styling */
 .chat-bubble .message {
     padding: 15px 20px;
     border-radius: 20px;
@@ -1053,12 +1000,14 @@ body {
     max-width: 250px;
 }
 
+/* User Message */
 .chat-bubble.user .message {
     background: #7b61ff;
     color: #fff;
     border-bottom-left-radius: 2px;
 }
 
+/* Agent Message */
 .chat-bubble.agent {
     flex-direction: row-reverse;
     margin-left: 50px;
@@ -1067,15 +1016,16 @@ body {
 .chat-bubble.agent .message {
     background: #fff;
     color: #1d1d1f;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     border-bottom-right-radius: 2px;
 }
 
-/* Support Text Styling */
+/* Right Side - Support Information */
 .support-info {
     flex: 1;
 }
 
+/* Support Features List */
 .support-list {
     list-style: none;
     margin-top: 30px;
@@ -1103,27 +1053,27 @@ body {
     line-height: 1.6;
 }
 
-/* Animation */
+/* Fade In Up Animation */
 @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* Responsive */
-@media (max-width: 992px) {
-    .support-container {
-        flex-direction: column;
-        text-align: center;
+    from {
+        opacity: 0;
+        transform: translateY(20px);
     }
-    .support-list li {
-        text-align: left;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
-/* --- FREE VALUE-ADDED FEATURES STYLING --- */
+
+/* ============================================================================
+   12. FREE FEATURES SECTION - "Web Hosting Made Better"
+   ============================================================================ */
+
+/* Free Features Section Container */
 .free-features-section {
     padding: 100px 0;
-    background-color: #1d1b4b; /* Dark indigo background from screenshot */
+    background-color: #1d1b4b;  /* Dark indigo background */
     color: #ffffff;
     overflow: hidden;
 }
@@ -1135,6 +1085,7 @@ body {
     gap: 60px;
 }
 
+/* Left Side - Introduction Text */
 .free-features-intro {
     flex: 1;
     max-width: 450px;
@@ -1152,7 +1103,7 @@ body {
     line-height: 1.6;
 }
 
-/* 4-Grid Items */
+/* Right Side - 4-Grid Feature Items */
 .features-grid-items {
     flex: 1.5;
     display: grid;
@@ -1160,6 +1111,7 @@ body {
     gap: 20px;
 }
 
+/* Feature Card Styling */
 .feature-card {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -1173,17 +1125,22 @@ body {
     transform: translateY(-5px);
 }
 
-/* Highlighted Card (Unlimited Bandwidth) */
+/* Highlighted Feature Card - "Unlimited Bandwidth" */
 .feature-card.highlighted {
     background: #ffffff;
     color: #1d1b4b;
-    transform: rotate(2deg); /* Subtle tilt for visual interest */
+    transform: rotate(2deg);  /* Subtle tilt for visual interest */
 }
 
 .feature-card.highlighted .f-icon {
     color: #7b61ff;
 }
 
+.feature-card.highlighted p {
+    opacity: 1;
+}
+
+/* Feature Icon */
 .f-icon {
     font-size: 2rem;
     margin-bottom: 15px;
@@ -1201,27 +1158,12 @@ body {
     line-height: 1.5;
 }
 
-.feature-card.highlighted p {
-    opacity: 1;
-}
 
-/* Responsive */
-@media (max-width: 992px) {
-    .free-features-container {
-        flex-direction: column;
-        text-align: center;
-    }
-    .features-grid-items {
-        grid-template-columns: 1fr;
-        width: 100%;
-    }
-    .feature-card.highlighted {
-        transform: rotate(0);
-    }
-}
+/* ============================================================================
+   13. TESTIMONIAL SECTION - Reviews & Statistics
+   ============================================================================ */
 
-
-/* --- TESTIMONIAL & STATS MASTER FIX --- */
+/* Testimonial Section Container */
 .testimonial-section {
     padding: 100px 0;
     text-align: center;
@@ -1232,35 +1174,43 @@ body {
 .testimonial-container {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Horizontally center everything */
+    align-items: center;
     max-width: 1200px;
     margin: 0 auto;
 }
 
+/* Testimonial Header */
 .testimonial-header {
     margin-bottom: 50px;
     max-width: 700px;
 }
 
-/* Review Cards Alignment */
+/* Trustpilot Badge */
+.trustpilot-badge {
+    /* Add styling if needed */
+}
+
+/* Testimonial Cards Grid */
 .testimonial-grid {
     display: flex;
-    flex-wrap: wrap;       /* Mobile-e niche nambe, desktop-e pashapashi */
+    flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
     width: 100%;
     margin-bottom: 80px;
 }
 
+/* Individual Testimonial Card */
 .testimonial-card {
-    flex: 0 1 350px;       /* Card-er width control kora hoyeche */
+    flex: 0 1 350px;
     background: #fff;
     border: 1px solid #f0f0f5;
     padding: 30px;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
 }
 
+/* Client Thumbnail Image */
 .client-thumb {
     width: 60px;
     height: 60px;
@@ -1268,18 +1218,24 @@ body {
     margin-bottom: 15px;
 }
 
-/* Stats (Numbers) Alignment Fix */
+/* Star Ratings */
+.stars {
+    /* Add star styling if needed */
+}
+
+/* Statistics Grid */
 .stats-grid {
     display: flex;
-    justify-content: space-around; /* Soman faka jaygay pashapashi thakbe */
+    justify-content: space-around;
     align-items: center;
     width: 100%;
     border-top: 1px solid #eee;
     padding-top: 50px;
-    flex-wrap: wrap; /* Mobile-e jeno bhenge na jay */
+    flex-wrap: wrap;
     gap: 20px;
 }
 
+/* Individual Stat Item */
 .stat-item {
     flex: 1;
     min-width: 150px;
@@ -1299,22 +1255,28 @@ body {
 }
 
 
-/* --- FAQ SECTION STYLING --- */
+/* ============================================================================
+   14. FAQ SECTION - Accordion Style
+   ============================================================================ */
+
+/* FAQ Section Container */
 .faq-section {
     padding: 100px 0;
-    background-color: #f8f9ff; /* Light gray-blue background */
+    background-color: #f8f9ff;
 }
 
 .faq-container {
-    max-width: 800px; /* FAQ readability-r jonno width simito kora hoyeche */
+    max-width: 800px;
     margin: 0 auto;
 }
 
+/* Accordion Wrapper */
 .accordion-wrapper {
     margin-top: 40px;
     width: 100%;
 }
 
+/* Individual Accordion Item */
 .accordion-item {
     background: #ffffff;
     border: 1px solid #e8e8ed;
@@ -1324,6 +1286,7 @@ body {
     transition: var(--transition);
 }
 
+/* Accordion Header - Clickable */
 .accordion-header {
     padding: 20px 30px;
     display: flex;
@@ -1344,8 +1307,9 @@ body {
     transition: transform 0.3s ease;
 }
 
+/* Accordion Content - Hidden Initially */
 .accordion-content {
-    max-height: 0; /* Initially hidden */
+    max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out, padding 0.3s ease;
     padding: 0 30px;
@@ -1359,23 +1323,27 @@ body {
     font-size: 15px;
 }
 
-/* Active State Styles */
+/* Active State - When Accordion is Open */
 .accordion-item.active {
     border-color: var(--primary-purple);
     box-shadow: 0 10px 20px rgba(123, 97, 255, 0.05);
 }
 
 .accordion-item.active .accordion-content {
-    max-height: 200px; /* Arbitrary value for animation */
+    max-height: 200px;
 }
 
 .accordion-item.active .icon {
-    transform: rotate(45deg); /* Plus turns into a cross */
+    transform: rotate(45deg);  /* Plus turns into a cross */
     color: var(--primary-purple);
 }
 
 
-/* --- FOOTER STYLING --- */
+/* ============================================================================
+   15. FOOTER
+   ============================================================================ */
+
+/* Main Footer Container */
 .main-footer {
     background-color: #ffffff;
     padding: 80px 0 20px 0;
@@ -1383,6 +1351,7 @@ body {
     color: var(--dark-text);
 }
 
+/* Footer Content Grid */
 .footer-container {
     display: flex;
     justify-content: space-between;
@@ -1391,6 +1360,7 @@ body {
     margin-bottom: 60px;
 }
 
+/* Footer Column */
 .footer-col {
     flex: 1;
     min-width: 200px;
@@ -1411,7 +1381,8 @@ body {
     margin-bottom: 15px;
 }
 
-.footer-col ul li a, .contact-details li {
+.footer-col ul li a,
+.contact-details li {
     text-decoration: none;
     color: var(--light-text);
     font-size: 14px;
@@ -1426,7 +1397,7 @@ body {
     padding-left: 5px;
 }
 
-/* Footer Bottom Bar */
+/* Footer Bottom Section */
 .footer-bottom {
     background: #f8f9ff;
     padding: 40px 0 20px 0;
@@ -1442,36 +1413,29 @@ body {
     margin-bottom: 30px;
 }
 
+/* Payment Gateways Section */
 .payment-gateways {
     display: flex;
-    flex-direction: column; /* Label upore image niche thakar jonno */
-    align-items: center;    /* Horizontal center */
-    justify-content: center; /* Vertical center */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     width: 100%;
     gap: 15px;
 }
 
 .payment-gateways img {
-    width: 100%;            /* Container onujayi width nibe */
-    max-width: 600px;       /* Desktop-e khub boro jeno na hoy */
-    height: auto;           /* Aspect ratio thik rakhbe */
-    max-height: 60px;       /* Device onujayi height simito rakhbe */
-    object-fit: contain;    /* Image jeno kete na jay ba stretch na hoy */
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    max-height: 60px;
+    object-fit: contain;
     display: block;
-    margin: 0 auto;         /* Center alignment nishchit korbe */
-    /*filter: grayscale(100%); /* Premium look-er jonno (optional) */
+    margin: 0 auto;
     opacity: 0.8;
 }
 
-/* Mobile-er jonno height arektu choto kora */
-@media screen and (max-width: 480px) {
-    .payment-gateways img {
-        max-height: 40px; 
-        max-width: 90%;     /* Side-e ektu gap thakbe */
-    }
-}
-
+/* Social Media Links */
 .social-links {
     display: flex;
     gap: 15px;
@@ -1495,6 +1459,7 @@ body {
     transform: translateY(-3px);
 }
 
+/* Copyright Text */
 .copyright {
     border-top: 1px solid #e8e8ed;
     padding-top: 20px;
@@ -1502,49 +1467,65 @@ body {
     color: #b5b5be;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .bottom-container {
-        flex-direction: column;
-        text-align: center;
-    }
-}
 
+/* ============================================================================
+   16. RESPONSIVE DESIGN - MEDIA QUERIES
+   ============================================================================ */
 
-
-
-/* ======================================================
-   MOBILE & TABLET RESPONSIVENESS (All Devices)
-   ====================================================== */
-
-/* --- 1. Tablets and Small Laptops (max-width: 1024px) --- */
+/* --- Tablets and Small Laptops (max-width: 1024px) --- */
 @media screen and (max-width: 1024px) {
     .container {
         padding: 0 30px;
     }
-    
+
     .hero-content h1 {
         font-size: 3rem;
     }
 
-    .pricing-grid, .testimonial-grid {
+    .pricing-grid,
+    .testimonial-grid {
         gap: 20px;
     }
 }
 
-/* --- 2. Mobile Devices (max-width: 768px) --- */
+/* --- Mobile Devices (max-width: 768px) --- */
 @media screen and (max-width: 768px) {
-    /* Header/Nav */
-    .nav-links {
-        display: none; /* Mobile menu pore add kora jabe, ekhonkar jonno hide */
+    /* Header & Navigation - Mobile Menu Toggle */
+    .menu-toggle {
+        display: block;
+        font-size: 22px;
+        cursor: pointer;
+        color: var(--primary-purple);
+        margin-left: 15px;
     }
-    
-    .main-header .container {
-        justify-content: center; /* Logo ebong login center e thakbe */
+
+    .nav-links {
+        position: absolute;
+        top: 80px;
+        left: -100%;  /* Hidden initially off-screen */
+        width: 100%;
+        height: auto;
+        background: #fff;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 0;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: 0.4s ease-in-out;
+        z-index: 1000;
         gap: 20px;
     }
 
-    /* Hero Section */
+    /* Active state - Shows mobile menu */
+    .nav-links.active {
+        left: 0;
+    }
+
+    .main-header .container {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    /* Hero Section - Mobile Adjustments */
     .hero-section {
         padding-top: 120px;
         min-height: auto;
@@ -1555,12 +1536,12 @@ body {
     }
 
     .hero-btns {
-        flex-direction: column; /* Buttons upore niche thakbe */
+        flex-direction: column;
         width: 100%;
         max-width: 300px;
     }
 
-    /* Pricing Section */
+    /* Pricing Section - Stacked Cards */
     .pricing-grid {
         flex-direction: column;
         align-items: center;
@@ -1569,21 +1550,26 @@ body {
     .pricing-card.floating {
         width: 100%;
         max-width: 100%;
-        transform: none !important; /* Mobile e hover lift bondho */
+        transform: none !important;  /* Remove hover lift on mobile */
     }
 
-    /* Everything in One Place & Security */
-    .features-container, .security-container, .support-container, .free-features-container {
+    /* Features, Security, Support Sections - Stack Vertically */
+    .features-container,
+    .security-container,
+    .support-container,
+    .free-features-container {
         flex-direction: column !important;
         text-align: center;
         gap: 40px;
     }
 
-    .features-visual, .security-graphics, .support-visual {
+    .features-visual,
+    .security-graphics,
+    .support-visual {
         width: 100%;
     }
 
-    /* Domain Section */
+    /* Domain Search - Mobile Layout */
     .domain-search-box {
         flex-direction: column;
         border-radius: 20px;
@@ -1603,18 +1589,60 @@ body {
         width: 100%;
     }
 
-    /* Testimonials & Stats */
+    /* Testimonials - Full Width Cards */
     .testimonial-card {
         flex: 1 1 100%;
     }
 
+    /* Stats Grid - 2 Columns */
     .stats-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 column stats */
+        grid-template-columns: repeat(2, 1fr);
         display: grid;
+    }
+
+    /* Upsell Banner - Mobile Stack */
+    .upsell-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+        padding: 40px 20px;
+    }
+
+    /* Footer - Mobile Stack */
+    .bottom-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Features Grid - Single Column on Mobile */
+    .features-grid-items {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .feature-card.highlighted {
+        transform: rotate(0);
+    }
+
+    /* Support List - Left Align Text */
+    .support-list li {
+        text-align: left;
+    }
+
+    /* Security List - Center Alignment */
+    .security-list li {
+        justify-content: center;
     }
 }
 
-/* --- 3. Extra Small Devices (max-width: 480px) --- */
+/* --- Desktop - Hide Mobile Menu Toggle (min-width: 769px) --- */
+@media screen and (min-width: 769px) {
+    .menu-toggle {
+        display: none;
+    }
+}
+
+/* --- Extra Small Devices (max-width: 480px) --- */
 @media screen and (max-width: 480px) {
     .hero-content h1 {
         font-size: 1.8rem;
@@ -1624,12 +1652,75 @@ body {
         font-size: 1.8rem;
     }
 
+    /* Stats Grid - Single Column */
     .stats-grid {
-        grid-template-columns: 1fr; /* 1 column stats */
+        grid-template-columns: 1fr;
     }
 
+    /* Footer - Center Stack */
     .footer-container {
         text-align: center;
         flex-direction: column;
     }
+
+    /* Payment Gateways - Smaller Size */
+    .payment-gateways img {
+        max-height: 40px;
+        max-width: 90%;
+    }
 }
+
+/* --- Features Grid Responsive (max-width: 992px) --- */
+@media (max-width: 992px) {
+    /* Features Grid Section */
+    .features-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .feature-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Security Section */
+    .security-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 50px;
+    }
+
+    .security-list li {
+        justify-content: center;
+    }
+
+    /* Support Section */
+    .support-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .support-list li {
+        text-align: left;
+    }
+
+    /* Free Features Section */
+    .free-features-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .features-grid-items {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .feature-card.highlighted {
+        transform: rotate(0);
+    }
+}
+
+
+/* ============================================================================
+   END OF STYLESHEET
+   ============================================================================ */

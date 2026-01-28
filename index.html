@@ -1,60 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- ============================================
+     HEAD SECTION - Meta tags, Title, and Styles
+     ============================================ -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giohost | Premium Web Hosting</title>
+    
+    <!-- External Stylesheets -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
+    <!-- ============================================
+         HEADER - Main Navigation Bar
+         ============================================ -->
     <header class="main-header">
         <nav class="container">
-    <div class="logo">
-        <img src="assets/image/giohost-dark.svg" alt="Giohost Logo">
-    </div>
-    
-    <ul class="nav-links" id="navLinks">
-        <li><a href="#">Home</a></li>
-        <li class="dropdown"><a href="#">Hosting ▾</a></li>
-        <li class="dropdown"><a href="#">BDIX Hosting ▾</a></li>
-        <li><a href="#">Domain</a></li>
-        <li class="dropdown"><a href="#">Support ▾</a></li>
-    </ul>
-
-        <div class="nav-actions">
-            <a href="#" class="login-btn">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M13.8 12H3"/></svg>
-            Login
-            </a>
-        
-            <div class="menu-toggle" id="mobileMenu">
-            <i class="fas fa-bars"></i>
+            <!-- Logo -->
+            <div class="logo">
+                <img src="assets/image/giohost-dark.svg" alt="Giohost Logo">
             </div>
-        </div>
-    </nav>
+            
+            <!-- Navigation Links -->
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#">Home</a></li>
+                <li class="dropdown"><a href="#">Hosting ▾</a></li>
+                <li class="dropdown"><a href="#">BDIX Hosting ▾</a></li>
+                <li><a href="#">Domain</a></li>
+                <li class="dropdown"><a href="#">Support ▾</a></li>
+            </ul>
+
+            <!-- Navigation Actions (Login and Mobile Menu) -->
+            <div class="nav-actions">
+                <a href="#" class="login-btn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M13.8 12H3"/>
+                    </svg>
+                    Login
+                </a>
+            
+                <!-- Mobile Menu Toggle -->
+                <div class="menu-toggle" id="mobileMenu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
     </header>
 
-    <script src="assets/js/script.js"></script>
-
+    <!-- ============================================
+         HERO SECTION - Main Landing Area
+         ============================================ -->
     <section class="hero-section">
+        <!-- Animated Background Elements -->
         <div class="liquid-bg">
             <div class="blob blob-1"></div>
             <div class="blob blob-2"></div>
             <div class="blob blob-3"></div>
-            <div class="dot-grid"></div> </div>
+            <div class="dot-grid"></div>
+        </div>
 
+        <!-- Hero Content -->
         <div class="container hero-content">
             <div class="badge">Recommended by Web Experts</div>
             <h1>Powerful Managed Web <br> Hosting In Bangladesh</h1>
             <p>Explore the best web hosting solutions for superior performance, security, and customer support. Start your online journey with a hosting plan tailored to your needs.</p>
             
+            <!-- Call-to-Action Buttons -->
             <div class="hero-btns">
                 <a href="#" class="btn btn-primary">View Pricing</a>
                 <a href="#" class="btn btn-secondary">Talk with Expert</a>
             </div>
 
+            <!-- Social Proof - User Avatars and Trust Badge -->
             <div class="social-proof">
                 <div class="avatar-group">
                     <img src="https://i.pravatar.cc/100?u=1" alt="User">
@@ -66,15 +88,21 @@
             </div>
         </div>
     </section>
-<!--pricing_section-->
+
+    <!-- ============================================
+         PRICING SECTION - Hosting Plans
+         ============================================ -->
     <section class="pricing-section">
         <div class="container pricing-container">
+            <!-- Section Header -->
             <div class="section-title">
                 <h2>Choose Your Web Hosting Plan</h2>
                 <p>Start with confidence - 14 Days money-back guarantee.</p>
             </div>
 
+            <!-- Pricing Cards Grid -->
             <div class="pricing-grid">
+                <!-- Budget Hosting Plan -->
                 <div class="pricing-card floating">
                     <div class="card-header">
                         <h3>Budget Hosting</h3>
@@ -92,6 +120,7 @@
                     </ul>
                 </div>
 
+                <!-- BDIX Hosting Plan - Featured -->
                 <div class="pricing-card floating featured">
                     <div class="card-header">
                         <h3>BDIX Hosting</h3>
@@ -109,6 +138,7 @@
                     </ul>
                 </div>
 
+                <!-- WordPress Hosting Plan -->
                 <div class="pricing-card floating">
                     <div class="card-header">
                         <h3>WordPress Hosting</h3>
@@ -129,6 +159,9 @@
         </div>
     </section>
 
+    <!-- ============================================
+         UPSELL BANNER - Premium Hosting CTA
+         ============================================ -->
     <section class="upsell-banner">
         <div class="container upsell-container">
             <div class="upsell-content">
@@ -141,19 +174,24 @@
         </div>
     </section>
 
-    <!--domain-section-->
+    <!-- ============================================
+         DOMAIN SECTION - Domain Search and Pricing
+         ============================================ -->
     <section class="domain-section">
         <div class="container domain-container">
+            <!-- Section Header -->
             <div class="section-title">
                 <h2>Find Your Perfect Domain</h2>
                 <p>Launch your idea with a memorable domain name with Pro Cloudify.</p>
             </div>
 
+            <!-- Domain Search Box -->
             <div class="domain-search-box">
                 <input type="text" placeholder="Type your domain name" id="domainInput">
                 <button class="search-btn">Search</button>
             </div>
 
+            <!-- Domain Extensions Pricing List -->
             <div class="domain-list">
                 <div class="domain-item">
                     <span class="sale-badge">Sale</span>
@@ -188,339 +226,406 @@
             </div>
         </div>
     </section>
-<!-- Feature/Service Showcase -->
+
+    <!-- ============================================
+         FEATURES GRID SECTION - Service Showcase
+         ============================================ -->
     <section class="features-grid-section">
-    <div class="container features-container">
-        <div class="features-content">
-            <h2 class="section-title-left">Everything in one place</h2>
+        <div class="container features-container">
+            <!-- Features Content (Left Side) -->
+            <div class="features-content">
+                <h2 class="section-title-left">Everything in one place</h2>
+                
+                <!-- Feature Item: Web Hosting Service -->
+                <div class="feature-item">
+                    <div class="feature-icon-box">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h3>Web Hosting Service</h3>
+                        <p>Deploy your site instantly without external setup or tools.</p>
+                    </div>
+                </div>
+
+                <!-- Feature Item: Connect Domain -->
+                <div class="feature-item">
+                    <div class="feature-icon-box">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h3>Connect a domain</h3>
+                        <p>Register and link domains directly through your dashboard.</p>
+                    </div>
+                </div>
+
+                <!-- Feature Item: Free Email -->
+                <div class="feature-item">
+                    <div class="feature-icon-box">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h3>Free email included</h3>
+                        <p>Create business emails and manage tools in one place.</p>
+                    </div>
+                </div>
+
+                <a href="#" class="btn-get-started">Get Started</a>
+            </div>
+
+            <!-- Features Visual Cards (Right Side) -->
+            <div class="features-visual">
+                <div class="visual-card web-server">
+                    <!-- <img src="/assets/image/cloud-server.png" alt="Web Server"> -->
+                    <span>web server</span>
+                </div>
+                <div class="visual-card professional-email">
+                    <i class="fas fa-envelope-open-text"></i>
+                    <span>Professional Email</span>
+                </div>
+                <div class="visual-card performance-score">
+                    <div class="score-circle">99</div>
+                    <span>Performance score</span>
+                </div>
+                <div class="visual-card connect-domain">
+                    <i class="fas fa-link"></i>
+                    <span>Connect a domain</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SECURITY SECTION - Trust & Security Features
+         ============================================ -->
+    <section class="security-section">
+        <div class="container security-container">
             
-            <div class="feature-item">
-                <div class="feature-icon-box">
-                    <i class="fas fa-server"></i> </div>
-                <div class="feature-text">
-                    <h3>Web Hosting Service</h3>
-                    <p>Deploy your site instantly without external setup or tools.</p>
+            <!-- Security Information (Left Side) -->
+            <div class="security-text">
+                <h2 class="section-title-left">Top Security. Full Confidence.</h2>
+                <ul class="security-list">
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span>Effortlessly back up files and secure your account with 2FA.</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span>Free SSL for enhanced site security and trust.</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span>Advanced security with daily backups & updates.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Security Graphics (Right Side) -->
+            <div class="security-graphics">
+                <div class="graphics-wrapper">
+                    <!-- Main Security Card -->
+                    <div class="floating-card security-card-main">
+                        <img src="assets/image/cloud-server.png" alt="Security Illustration">
+                        <div class="badge-active">Active</div>
+                    </div>
+                    <!-- SSL Badge -->
+                    <div class="floating-badge ssl-badge">
+                        <i class="fas fa-shield-alt"></i> SSL Certificate Active
+                    </div>
+                    <!-- Backup Badge -->
+                    <div class="floating-badge backup-badge">
+                        <i class="fas fa-history"></i> Daily Backup Complete
+                    </div>
                 </div>
             </div>
 
-            <div class="feature-item">
-                <div class="feature-icon-box">
-                    <i class="fas fa-globe"></i>
-                </div>
-                <div class="feature-text">
-                    <h3>Connect a domain</h3>
-                    <p>Register and link domains directly through your dashboard.</p>
-                </div>
-            </div>
-
-            <div class="feature-item">
-                <div class="feature-icon-box">
-                    <i class="fas fa-envelope"></i>
-                </div>
-                <div class="feature-text">
-                    <h3>Free email included</h3>
-                    <p>Create business emails and manage tools in one place.</p>
-                </div>
-            </div>
-
-            <a href="#" class="btn-get-started">Get Started</a>
         </div>
+    </section>
 
-        <div class="features-visual">
-            <div class="visual-card web-server">
-               <!-- <img src="/assets/image/cloud-server.png" alt="Web Server">-->
-                <span>web server</span>
-            </div>
-            <div class="visual-card professional-email">
-                <i class="fas fa-envelope-open-text"></i>
-                <span>Professional Email</span>
-            </div>
-            <div class="visual-card performance-score">
-                <div class="score-circle">99</div>
-                <span>Performance score</span>
-            </div>
-            <div class="visual-card connect-domain">
-                <i class="fas fa-link"></i>
-                <span>Connect a domain</span>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Trust & Security Section -->
-<section class="security-section">
-    <div class="container security-container">
-        
-        <div class="security-text">
-            <h2 class="section-title-left">Top Security. Full Confidence.</h2>
-            <ul class="security-list">
-                <li>
-                    <i class="fas fa-check-circle"></i>
-                    <span>Effortlessly back up files and secure your account with 2FA.</span>
-                </li>
-                <li>
-                    <i class="fas fa-check-circle"></i>
-                    <span>Free SSL for enhanced site security and trust.</span>
-                </li>
-                <li>
-                    <i class="fas fa-check-circle"></i>
-                    <span>Advanced security with daily backups & updates.</span>
-                </li>
-            </ul>
-        </div>
-
-        <div class="security-graphics">
-            <div class="graphics-wrapper">
-                <div class="floating-card security-card-main">
-                    <img src="assets/image/cloud-server.png" alt="Security Illustration">
-                    <div class="badge-active">Active</div>
-                </div>
-                <div class="floating-badge ssl-badge">
-                    <i class="fas fa-shield-alt"></i> SSL Certificate Active
-                </div>
-                <div class="floating-badge backup-badge">
-                    <i class="fas fa-history"></i> Daily Backup Complete
-                </div>
-            </div>
-        </div>
-
-    </div>
-</section>
-<!-- Support Highlight Section -->
-<section class="support-section">
-    <div class="container support-container">
-        
-        <div class="support-visual">
-            <div class="chat-wrapper">
-                <div class="chat-bubble user">
-                    <img src="https://i.pravatar.cc/100?u=9" alt="User">
-                    <div class="message">Hello, How secure is my site here?</div>
-                </div>
-                <div class="chat-bubble agent">
-                    <img src="https://i.pravatar.cc/100?u=12" alt="Agent">
-                    <div class="message">Hi, Every site gets SSL, backups, and DDoS protection by default.</div>
-                    <span class="status-dot"></span>
-                </div>
-            </div>
-        </div>
-
-        <div class="support-info">
-            <h2 class="section-title-left">Elite Support, Available 24/7</h2>
-            <ul class="support-list">
-                <li>
-                    <i class="fas fa-check"></i>
-                    <p>Connect with our dedicated support team anytime via <strong>live chat or email.</strong></p>
-                </li>
-                <li>
-                    <i class="fas fa-check"></i>
-                    <p>With <strong>multilingual experts</strong> on hand, you'll always have clear communication.</p>
-                </li>
-                <li>
-                    <i class="fas fa-check"></i>
-                    <p>Experience fast, efficient service—responses in <strong>under 5 minutes.</strong></p>
-                </li>
-            </ul>
-        </div>
-
-    </div>
-</section>
-<!-- Free Value-Added Features -->
-<section class="free-features-section">
-    <div class="container free-features-container">
-        
-        <div class="free-features-intro">
-            <h2 class="section-title-left">Web Hosting is even better with all these free features</h2>
-            <p>Everything you need to launch and manage your website—efficiently, securely, and without hidden costs. Web Hosting made simple and stress-free.</p>
-            <a href="#" class="btn-get-started">Get Started</a>
-        </div>
-
-        <div class="features-grid-items">
-            <div class="feature-card">
-                <div class="f-icon"><i class="fas fa-magic"></i></div>
-                <h4>1 Click Install</h4>
-                <p>Over 400 Apps 1-Click Installs, including WordPress, Drupal, Joomla & phpBB.</p>
-            </div>
-            <div class="feature-card highlighted">
-                <div class="f-icon"><i class="fas fa-infinity"></i></div>
-                <h4>Unlimited Bandwidth</h4>
-                <p>We can handle all the traffic you want to bring in to your website. We offer unlimited traffic.</p>
-            </div>
-            <div class="feature-card">
-                <div class="f-icon"><i class="fas fa-exchange-alt"></i></div>
-                <h4>Free Site Transfer</h4>
-                <p>Our experts will help to move your site from any compatible web hosting provider to our server.</p>
-            </div>
-            <div class="feature-card">
-                <div class="f-icon"><i class="fas fa-database"></i></div>
-                <h4>Free Backup</h4>
-                <p>For secure your website we provide free backup to secure your data by Pro Cloudify.</p>
-            </div>
-        </div>
-
-    </div>
-</section>
-<!-- Testimonial Section -->
-<section class="testimonial-section">
-    <div class="container testimonial-container">
-        
-        <div class="testimonial-header">
-            <h2 class="section-title">Start Strong with the Best!</h2>
-            <p>See how our hosting solutions drive business growth with reliability, support, and value.</p>
-            <div class="trustpilot-badge">
-                <!-- <img src="/assets/image/star.png" alt="Trustpilot"> -->
-                 <span>Review us on <strong>Trustpilot</strong></span>
-            </div>
-        </div>
-
-        <div class="testimonial-grid">
-            <div class="testimonial-card">
-                <img src="https://i.pravatar.cc/100?u=1" alt="Leyla Moradi" class="client-thumb">
-                <p>"Reliable speed and expert support make this hosting perfect for agencies."</p>
-                <div class="stars">★★★★★</div>
-                <h4>Leyla Moradi</h4>
-                <span>Digital Agency Owner</span>
-            </div>
-            <div class="testimonial-card">
-                <img src="https://i.pravatar.cc/100?u=2" alt="James Whitmore" class="client-thumb">
-                <p>"Clean UI, smooth setup, and solid performance. I trust this provider."</p>
-                <div class="stars">★★★★★</div>
-                <h4>James Whitmore</h4>
-                <span>Web Developer</span>
-            </div>
-            <div class="testimonial-card">
-                <img src="https://i.pravatar.cc/100?u=3" alt="Liam Carter" class="client-thumb">
-                <p>"My online store loads fast and runs smooth. Everything I need to grow."</p>
-                <div class="stars">★★★★★</div>
-                <h4>Liam Carter</h4>
-                <span>E-commerce Brand Owner</span>
-            </div>
-        </div>
-
-        <div class="stats-grid">
-            <div class="stat-item">
-                <h3>2,236+</h3>
-                <p>Domains Reg</p>
-            </div>
-            <div class="stat-item">
-                <h3>5,060+</h3>
-                <p>Happy Users</p>
-            </div>
-            <div class="stat-item">
-                <h3>8,180+</h3>
-                <p>Website Hosted</p>
-            </div>
-            <div class="stat-item">
-                <h3>112+</h3>
-                <p>Agencies Trust Us</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!--FAQ saction-->
-<section class="faq-section">
-    <div class="container faq-container">
-        <div class="section-title">
-            <h2>Frequently Asked Questions</h2>
-        </div>
-
-        <div class="accordion-wrapper">
-            <div class="accordion-item">
-                <div class="accordion-header">
-                    <span>What makes Pro Cloudify different?</span>
-                    <i class="fas fa-plus icon"></i>
-                </div>
-                <div class="accordion-content">
-                    <p>Pro Cloudify focus on high-performance managed hosting with 24/7 expert support and local BDIX connectivity for the fastest experience in Bangladesh.</p>
+    <!-- ============================================
+         SUPPORT SECTION - Customer Support Highlight
+         ============================================ -->
+    <section class="support-section">
+        <div class="container support-container">
+            
+            <!-- Support Visual - Chat Simulation (Left Side) -->
+            <div class="support-visual">
+                <div class="chat-wrapper">
+                    <!-- User Message -->
+                    <div class="chat-bubble user">
+                        <img src="https://i.pravatar.cc/100?u=9" alt="User">
+                        <div class="message">Hello, How secure is my site here?</div>
+                    </div>
+                    <!-- Agent Response -->
+                    <div class="chat-bubble agent">
+                        <img src="https://i.pravatar.cc/100?u=12" alt="Agent">
+                        <div class="message">Hi, Every site gets SSL, backups, and DDoS protection by default.</div>
+                        <span class="status-dot"></span>
+                    </div>
                 </div>
             </div>
 
-            <div class="accordion-item">
-                <div class="accordion-header">
-                    <span>Do you provide free website migration?</span>
-                    <i class="fas fa-plus icon"></i>
+            <!-- Support Information (Right Side) -->
+            <div class="support-info">
+                <h2 class="section-title-left">Elite Support, Available 24/7</h2>
+                <ul class="support-list">
+                    <li>
+                        <i class="fas fa-check"></i>
+                        <p>Connect with our dedicated support team anytime via <strong>live chat or email.</strong></p>
+                    </li>
+                    <li>
+                        <i class="fas fa-check"></i>
+                        <p>With <strong>multilingual experts</strong> on hand, you'll always have clear communication.</p>
+                    </li>
+                    <li>
+                        <i class="fas fa-check"></i>
+                        <p>Experience fast, efficient service—responses in <strong>under 5 minutes.</strong></p>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ============================================
+         FREE FEATURES SECTION - Value-Added Features
+         ============================================ -->
+    <section class="free-features-section">
+        <div class="container free-features-container">
+            
+            <!-- Introduction Text -->
+            <div class="free-features-intro">
+                <h2 class="section-title-left">Web Hosting is even better with all these free features</h2>
+                <p>Everything you need to launch and manage your website—efficiently, securely, and without hidden costs. Web Hosting made simple and stress-free.</p>
+                <a href="#" class="btn-get-started">Get Started</a>
+            </div>
+
+            <!-- Feature Cards Grid -->
+            <div class="features-grid-items">
+                <!-- Feature Card: 1 Click Install -->
+                <div class="feature-card">
+                    <div class="f-icon"><i class="fas fa-magic"></i></div>
+                    <h4>1 Click Install</h4>
+                    <p>Over 400 Apps 1-Click Installs, including WordPress, Drupal, Joomla & phpBB.</p>
                 </div>
-                <div class="accordion-content">
-                    <p>Yes! Our experts will move your site from any compatible hosting provider to our servers for free without any downtime.</p>
+                <!-- Feature Card: Unlimited Bandwidth (Highlighted) -->
+                <div class="feature-card highlighted">
+                    <div class="f-icon"><i class="fas fa-infinity"></i></div>
+                    <h4>Unlimited Bandwidth</h4>
+                    <p>We can handle all the traffic you want to bring in to your website. We offer unlimited traffic.</p>
+                </div>
+                <!-- Feature Card: Free Site Transfer -->
+                <div class="feature-card">
+                    <div class="f-icon"><i class="fas fa-exchange-alt"></i></div>
+                    <h4>Free Site Transfer</h4>
+                    <p>Our experts will help to move your site from any compatible web hosting provider to our server.</p>
+                </div>
+                <!-- Feature Card: Free Backup -->
+                <div class="feature-card">
+                    <div class="f-icon"><i class="fas fa-database"></i></div>
+                    <h4>Free Backup</h4>
+                    <p>For secure your website we provide free backup to secure your data by Pro Cloudify.</p>
                 </div>
             </div>
 
-            <div class="accordion-item">
-                <div class="accordion-header">
-                    <span>What uptime do you guarantee?</span>
-                    <i class="fas fa-plus icon"></i>
-                </div>
-                <div class="accordion-content">
-                    <p>We provide a 99.99% uptime guarantee, ensuring your business stays online around the clock.</p>
+        </div>
+    </section>
+
+    <!-- ============================================
+         TESTIMONIAL SECTION - Customer Reviews
+         ============================================ -->
+    <section class="testimonial-section">
+        <div class="container testimonial-container">
+            
+            <!-- Testimonial Header -->
+            <div class="testimonial-header">
+                <h2 class="section-title">Start Strong with the Best!</h2>
+                <p>See how our hosting solutions drive business growth with reliability, support, and value.</p>
+                <div class="trustpilot-badge">
+                    <!-- <img src="/assets/image/star.png" alt="Trustpilot"> -->
+                    <span>Review us on <strong>Trustpilot</strong></span>
                 </div>
             </div>
 
-            <div class="accordion-item">
-                <div class="accordion-header">
-                    <span>Are SSL and backups included?</span>
-                    <i class="fas fa-plus icon"></i>
+            <!-- Testimonial Cards Grid -->
+            <div class="testimonial-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <img src="https://i.pravatar.cc/100?u=1" alt="Leyla Moradi" class="client-thumb">
+                    <p>"Reliable speed and expert support make this hosting perfect for agencies."</p>
+                    <div class="stars">★★★★★</div>
+                    <h4>Leyla Moradi</h4>
+                    <span>Digital Agency Owner</span>
                 </div>
-                <div class="accordion-content">
-                    <p>Absolutely. Every hosting plan comes with a lifetime free SSL certificate and automated daily backups.</p>
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <img src="https://i.pravatar.cc/100?u=2" alt="James Whitmore" class="client-thumb">
+                    <p>"Clean UI, smooth setup, and solid performance. I trust this provider."</p>
+                    <div class="stars">★★★★★</div>
+                    <h4>James Whitmore</h4>
+                    <span>Web Developer</span>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <img src="https://i.pravatar.cc/100?u=3" alt="Liam Carter" class="client-thumb">
+                    <p>"My online store loads fast and runs smooth. Everything I need to grow."</p>
+                    <div class="stars">★★★★★</div>
+                    <h4>Liam Carter</h4>
+                    <span>E-commerce Brand Owner</span>
+                </div>
+            </div>
+
+            <!-- Statistics Grid -->
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>2,236+</h3>
+                    <p>Domains Reg</p>
+                </div>
+                <div class="stat-item">
+                    <h3>5,060+</h3>
+                    <p>Happy Users</p>
+                </div>
+                <div class="stat-item">
+                    <h3>8,180+</h3>
+                    <p>Website Hosted</p>
+                </div>
+                <div class="stat-item">
+                    <h3>112+</h3>
+                    <p>Agencies Trust Us</p>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<!--Footer-->
-<footer class="main-footer">
-    <div class="container footer-container">
-        
-        <div class="footer-col company-info">
-            <div class="logo">
-                <img src="assets/image/giohost-dark.svg" alt="ProCloudify Logo">
-             <!--   <span class="logo-text">PRO<span>Cloudify</span></span> -->
+    </section>
+
+    <!-- ============================================
+         FAQ SECTION - Frequently Asked Questions
+         ============================================ -->
+    <section class="faq-section">
+        <div class="container faq-container">
+            <!-- Section Title -->
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
             </div>
-        </br>
-            <ul class="contact-details">
-                <li><i class="fas fa-building"></i> GioHost LTD</li>
-                <li><i class="fas fa-file-alt"></i> Business Reg No: *****</li>
-                <li><i class="fas fa-map-marker-alt"></i> Dhaka</li>
-                <li><i class="fas fa-envelope"></i> hello@giohost.com.bd</li>
-            </ul>
+
+            <!-- Accordion Wrapper -->
+            <div class="accordion-wrapper">
+                <!-- FAQ Item 1 -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>What makes Pro Cloudify different?</span>
+                        <i class="fas fa-plus icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Pro Cloudify focus on high-performance managed hosting with 24/7 expert support and local BDIX connectivity for the fastest experience in Bangladesh.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>Do you provide free website migration?</span>
+                        <i class="fas fa-plus icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Yes! Our experts will move your site from any compatible hosting provider to our servers for free without any downtime.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>What uptime do you guarantee?</span>
+                        <i class="fas fa-plus icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>We provide a 99.99% uptime guarantee, ensuring your business stays online around the clock.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>Are SSL and backups included?</span>
+                        <i class="fas fa-plus icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Absolutely. Every hosting plan comes with a lifetime free SSL certificate and automated daily backups.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER - Company Info and Links
+         ============================================ -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            
+            <!-- Company Information Column -->
+            <div class="footer-col company-info">
+                <div class="logo">
+                    <img src="assets/image/giohost-dark.svg" alt="ProCloudify Logo">
+                    <!-- <span class="logo-text">PRO<span>Cloudify</span></span> -->
+                </div>
+                <br>
+                <ul class="contact-details">
+                    <li><i class="fas fa-building"></i> GioHost LTD</li>
+                    <li><i class="fas fa-file-alt"></i> Business Reg No: *****</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Dhaka</li>
+                    <li><i class="fas fa-envelope"></i> hello@giohost.com.bd</li>
+                </ul>
+            </div>
+
+            <!-- Hosting & Domain Links Column -->
+            <div class="footer-col">
+                <h4>Hosting & Domain</h4>
+                <ul>
+                    <li><a href="#">Budget Hosting</a></li>
+                    <li><a href="#">Premium Hosting</a></li>
+                    <li><a href="#">WordPress Hosting</a></li>
+                    <li><a href="#">Ecommerce Hosting</a></li>
+                </ul>
+            </div>
+
+            <!-- Information Links Column -->
+            <div class="footer-col">
+                <h4>Information</h4>
+                <ul>
+                    <li><a href="#">Affiliate Program</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                </ul>
+            </div>
         </div>
 
-        <div class="footer-col">
-            <h4>Hosting & Domain</h4>
-            <ul>
-                <li><a href="#">Budget Hosting</a></li>
-                <li><a href="#">Premium Hosting</a></li>
-                <li><a href="#">WordPress Hosting</a></li>
-                <li><a href="#">Ecommerce Hosting</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-col">
-            <h4>Information</h4>
-            <ul>
-                <li><a href="#">Affiliate Program</a></li>
-                <li><a href="#">Terms & Conditions</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Refund Policy</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="footer-bottom">
-        <div class="container bottom-container">
-            <div class="payment-gateways">
-                <span>PAYMENT GATEWAY</span>
-                <img src="assets/image/paystation-banner.jpg" alt="Payment Gateways (Visa, bKash, Stripe)">
+        <!-- Footer Bottom Section -->
+        <div class="footer-bottom">
+            <div class="container bottom-container">
+                <!-- Payment Gateways -->
+                <div class="payment-gateways">
+                    <span>PAYMENT GATEWAY</span>
+                    <img src="assets/image/paystation-banner.jpg" alt="Payment Gateways (Visa, bKash, Stripe)">
+                </div>
+                <!--
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+                -->
             </div>
-            <!--
-            <div class="social-links">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
+            
+            <!-- Copyright Notice -->
+            <div class="copyright">
+                <p>© 2026 GioHost | Premium Cloud Web Hosting & Domain Registration Services. All Rights Reserved.</p>
             </div>
-            -->
         </div>
-        <div class="copyright" >
-            <p>© 2026 GioHost | Premium Cloud Web Hosting & Domain Registration Services. All Rights Reserved.</p>
-        </div>
+    </footer>
+
+    <!-- ============================================
+         SCRIPTS - JavaScript Files
+         ============================================ -->
+    <script src="assets/js/script.js"></script>
 
 </body>
 </html>
